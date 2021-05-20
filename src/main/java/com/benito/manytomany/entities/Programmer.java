@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -20,7 +21,7 @@ public class Programmer {
 	private String name;
 	private int salary;
 	
-	@ManyToMany(cascade = CascadeType.ALL)
+	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinTable(name = "programmers_projects", 
 				joinColumns = @JoinColumn(name="programmer_id",referencedColumnName = "id"),
 				inverseJoinColumns = @JoinColumn(name="project_id",referencedColumnName = "id"))

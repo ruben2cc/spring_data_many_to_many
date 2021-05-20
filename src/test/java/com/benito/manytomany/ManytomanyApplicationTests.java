@@ -27,7 +27,6 @@ class ManytomanyApplicationTests {
 	}
 	
 	@Test
-	@Trans
 	public void testManyTomanyLoadProgrammer(){
 		Programmer programmer = repo.findById(1).get();
 		System.out.println(programmer);
