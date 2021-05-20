@@ -26,6 +26,9 @@ public class Programmer {
 				inverseJoinColumns = @JoinColumn(name="project_id",referencedColumnName = "id"))
 	private List<Project> projects;
 
+	public Programmer() {
+	}
+
 	public Programmer(String name, int salary) {
 		this.name = name;
 		this.salary = salary;
@@ -62,5 +65,11 @@ public class Programmer {
 	public void setProjects(List<Project> projects) {
 		this.projects = projects;
 	}
+
+	@Override
+	public String toString() {
+		return "Programmer [id=" + id + ", name=" + name + ", salary=" + salary + "]";
+	}
+	
 
 }

@@ -46,5 +46,13 @@ public class Project {
 	public void setProgramers(List<Programmer> programers) {
 		this.programers = programers;
 	}
+
+	@Override
+	public String toString() {
+		return "Project [id=" + id + ", name=" + name + "]";
+	}
+
+	public Project() {
+	}
 	
 }

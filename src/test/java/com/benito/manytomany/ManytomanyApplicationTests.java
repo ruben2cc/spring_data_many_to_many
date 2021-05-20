@@ -25,6 +25,14 @@ class ManytomanyApplicationTests {
 		programmer.setProjects(projects);
 		repo.save(programmer);
 	}
+	
+	@Test
+	@Trans
+	public void testManyTomanyLoadProgrammer(){
+		Programmer programmer = repo.findById(1).get();
+		System.out.println(programmer);
+		System.out.println(programmer.getProjects());
+	}
 
 }
 
